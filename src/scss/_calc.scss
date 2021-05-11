@@ -1,0 +1,124 @@
+@import "reset";
+
+.calc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 500px;
+    background-color: $calcBodyColor;
+    &__input{
+        text-align: right;
+        grid-column: 1/-1;
+        border: 1px solid grey;
+        font-size: 45px;
+        padding-right: 15px;
+        outline: none;
+    }
+    &__button{
+         font-size: 45px;
+         line-height: 80px;
+         text-align: center;
+         cursor: pointer;
+         background-color: $btnOperationColor;
+         &--nr{
+             background-color: $btnNumbersColor;
+         }
+    }
+    &__button--active{
+        box-shadow: inset 0px 0px 7px 1px rgba(0,0,0,0.7);
+        font-size:43px;
+    }
+    .cancel{
+        grid-area: 2/4/3/6;
+        background-color: $btnCancelColor;
+        color: white;
+    }
+    .zero{
+        grid-area: 5/1/6/3;
+    }
+    .score{
+        grid-area: 5/4/6/-1;
+    } 
+}
+
+@media(max-width: 500px){
+    .calc{
+        width: 360px;
+        gap: 5px;
+        padding: 5px;
+        &__input{
+            font-size: 38px;
+            padding-right: 10px;
+        }
+        &__button{
+            font-size: 36px;
+            line-height: 65px;
+        }
+        &__button--active{
+            font-size:36px;
+        }
+    }
+}
+
+@media(max-width: 375px){
+    .calc{
+        width: 320px;
+        gap: 5px;
+        padding: 5px;
+        &__input{
+            font-size: 38px;
+            padding-right: 10px;
+        }
+        &__button{
+            font-size: 36px;
+            line-height: 60px;
+        }
+        &__button--active{
+            font-size:36px;
+        }
+    }
+}
+
+@media(max-height: 560px){
+    .calc{
+        width: 360px;
+        gap: 5px;
+        padding: 5px;
+        &__input{
+            font-size: 38px;
+            padding-right: 10px;
+        }
+        &__button{
+            font-size: 36px;
+            line-height: 65px;
+        }
+        &__button--active{
+            font-size:36px;
+        }
+    }
+}
+
+@media(max-height: 321px){
+    .calc{
+        width: 300px;
+        gap: 5px;
+        padding: 5px;
+        &__input{
+            font-size: 33px;
+            padding-right: 10px;
+        }
+        &__button{
+            font-size: 32px;
+            line-height: 50px;
+        }
+        &__button--active{
+            font-size:36px;
+        }
+    }
+}
