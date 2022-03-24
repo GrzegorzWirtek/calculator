@@ -13,7 +13,7 @@ The website was created as part of JavaScript learning. This is the first succes
 Project is created with:
 
 - **HTML5**
-- **SASS/SCSS**
+- **SCSS**
 - **JavaScript**
 - **@babel/core** version 7.4.5
 - **@babel/preset-env** version 7.4.5
